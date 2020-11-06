@@ -22,7 +22,7 @@ Use this as a baseline for your plugins.
 2. Run `gradlew build` in `GodotAndroidPluginDemo\AndroidPlugin`
 3. Copy `GodotAndroidPluginDemo\AndroidPlugin\DemoLib\build\outputs\aar\DemoLib-release.aar` to `GodotAndroidPluginDemo\GodotPlugin`
 4. Rename `DemoLib-release.aar` to `DemoPlugin.aar`
-5. Copy both files from `aa` to `aa`
+5. Copy both files from `GodotAndroidPluginDemo\GodotPlugin` to `GodotAndroidPluginDemo\GodotProject\android\plugins`
 6. Follow [these steps](https://docs.godotengine.org/en/stable/getting_started/workflow/export/android_custom_build.html#doc-android-custom-build) to set up Godot to build for android
 7. Build the godot project and run
     * Export `apk` and install on phone
