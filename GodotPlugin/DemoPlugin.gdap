@@ -1,0 +1,11 @@
+[config]
+
+name="DemoPlugin"
+binary_type="local"
+binary="DemoPlugin.aar"
+
+[dependencies]
+
+local=[]
+remote=[]
+custom_maven_repos=[]

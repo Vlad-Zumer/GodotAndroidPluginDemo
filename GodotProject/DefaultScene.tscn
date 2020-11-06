@@ -1,0 +1,101 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://DefaultScene.gd" type="Script" id=1]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Fonts/AlegreyaSans-Black.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Fonts/AlegreyaSans-Black.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 70
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://Fonts/AlegreyaSans-Black.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 55
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://Fonts/AlegreyaSans-BlackItalic.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 80
+font_data = SubResource( 7 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 1080.0
+margin_bottom = 572.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 2 )
+text = "Received From plugin"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+margin_top = 576.0
+margin_right = 1080.0
+margin_bottom = 660.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 1, 0.239216, 1 )
+text = "Received From plugin"
+align = 1
+valign = 1
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer"]
+margin_top = 664.0
+margin_right = 1080.0
+margin_bottom = 1237.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 6 )
+text = "Hello"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_top = 1241.0
+margin_right = 1080.0
+margin_bottom = 1343.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 8 )
+text = "Send To Plugin"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+margin_top = 1347.0
+margin_right = 1080.0
+margin_bottom = 1449.0
+size_flags_horizontal = 3
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 8 )
+text = "PluginSignalTest"
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_Button2_pressed"]

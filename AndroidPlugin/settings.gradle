@@ -1,0 +1,4 @@
+include ':godot-lib.release'
+include ':DemoLib'
+include ':app'
+rootProject.name = "AndroidPlugin"
